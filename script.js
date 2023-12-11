@@ -20,6 +20,30 @@ const frozen = ["hotdog", "tocino", "chicken", "beef", "fish", "pampanga's best"
 
 
 
+
+
+var drinksaisle = document.getElementsByClassName("drinksaisle")[0];
+var frozenaisle = document.getElementsByClassName("frozenaisle")[0];
+var fruitvegaisle = document.getElementsByClassName("fruitvegaisle")[0];
+var cannedgoodsaisle = document.getElementsByClassName("cannedgoodsaisle")[0];
+var medicalaisle = document.getElementsByClassName("medicalaisle")[0];
+var cleaningaisle = document.getElementsByClassName("cleaningaisle")[0];
+var hygieneaisle = document.getElementsByClassName("hygieneaisle")[0];
+var condimentsaisle = document.getElementsByClassName("condimentsaisle")[0];
+var instantnoodlesaisle = document.getElementsByClassName("instantnoodlesaisle")[0];
+var chipsaisle = document.getElementsByClassName("chipsaisle")[0];
+var entrance = document.getElementsByClassName("entrance")[0];
+var conleftaisle = document.getElementsByClassName("conleftaisle")[0];
+var insleftaisle = document.getElementsByClassName("insleftaisle")[0];
+var chileftaisle = document.getElementsByClassName("chileftaisle")[0];
+var centeraisle = document.getElementsByClassName("centeraisle")[0];
+var medconaisle = document.getElementsByClassName("medconaisle")[0];
+var fruchiaisle = document.getElementsByClassName("fruchiaisle")[0];
+var caninsaisle = document.getElementsByClassName("caninsaisle")[0];
+
+
+
+
 function findpath(){
     // Get the content of the text area
     var textareaContent = document.getElementById("userentry").value;
@@ -69,6 +93,78 @@ function findpath(){
         }
     }
 
-  const uniqueaisle = new Set(aisles);
+    
+    const uniqueaisle = new Set(aisles);
+
+
+    const allaisle = Array.from(uniqueaisle)
+
+    changecolor(entrance);
+
+    const aislecount = allaisle.length;
+
+    
+    if(aislecount==1){
+        if(allaisle.includes("frozen") || allaisle.includes("drinks")){
+            changecolor(hygieneaisle);
+            changecolor(centeraisle);
+            changecolor(cleaningaisle);
+            changecolor(frozenaisle);
+            if(allaisle.includes("drinks")){
+                changecolor(drinksaisle);
+            }
+        }else if(allaisle.includes("chips") || allaisle.includes("instantnoodles") || allaisle.includes("condiments") || allaisle.includes("hygiene")){
+            
+            if(allaisle[0]=="chips"){
+                changecolor(conleftaisle);
+                changecolor(insleftaisle);
+                changecolor(chileftaisle);
+                changecolor(chipsaisle);
+            }else if(allaisle[0]=="instantnoodles"){
+                changecolor(conleftaisle);
+                changecolor(insleftaisle);
+                changecolor(instantnoodlesaisle)
+            }else if(allaisle[0]=="condiments"){
+                changecolor(conleftaisle);
+                changecolor(condimentsaisle);
+            }else{
+                changecolor(hygieneaisle);
+            }
+
+        }else{
+            changecolor(hygieneaisle);
+            changecolor(centeraisle);
+            if(allaisle[0]=="cleaning"){
+                changecolor(cleaningaisle);
+            }else if(allaisle[0]=="medical"){
+                changecolor(medconaisle);
+                changecolor(medicalaisle);
+            }else if(allaisle[0]=="cannedgoods"){
+                changecolor(medconaisle);
+                changecolor(caninsaisle);
+                changecolor(cannedgoodsaisle);
+            }else if(allaisle[0]=="fruitveg"){
+                changecolor(medconaisle);
+                changecolor(caninsaisle)
+                changecolor(fruchiaisle);
+                changecolor(fruitvegaisle);
+            }
+        }
+
+    }else{
+        
+    }
+
+
+    
+
+
+
+
   
+}
+
+
+function changecolor(classaisle){
+    classaisle.style.backgroundColor  = 'red';
 }
