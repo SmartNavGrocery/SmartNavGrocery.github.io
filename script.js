@@ -151,18 +151,151 @@ function findpath(){
             }
         }
 
-    }else{
-        
     }
 
+    if((!allaisle.includes("fruitveg") && !allaisle.includes("cannedgoods") && !allaisle.includes("medical") && !allaisle.includes("cleaning")) && (allaisle.includes("chips") || allaisle.includes("instantnoodles") || allaisle.includes("condiments") || allaisle.includes("hygiene")) && (!allaisle.includes("drinks") && !allaisle.includes("frozen"))){
+        console.log("1st row only")
+        console.log(allaisle.includes("fruitveg"));
+        for(var i=0; i<aislecount; i++){
+            switch(allaisle[i]){
+                
+                case "chips":
+                    changecolor(conleftaisle);
+                    changecolor(insleftaisle);
+                    changecolor(chileftaisle);
+                    changecolor(chipsaisle);
+                    break;
+                
+                case "instantnoodles":
+                    changecolor(conleftaisle);
+                    changecolor(insleftaisle);
+                    changecolor(instantnoodlesaisle);
+                    break;
 
+                case "condiments":
+                    changecolor(conleftaisle);
+                    changecolor(condimentsaisle);
+                    break;
+
+                case "hygiene":
+                    changecolor(hygieneaisle);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }else if((allaisle.includes("fruitveg") || allaisle.includes("cannedgoods") || allaisle.includes("medical") || allaisle.includes("cleaning")) && (!allaisle.includes("chips") && !allaisle.includes("instantnoodles") && !allaisle.includes("condiments") && !allaisle.includes("hygiene")) && (!allaisle.includes("drinks") && !allaisle.includes("frozen"))){
+        changecolor(hygieneaisle);
+        changecolor(centeraisle);
+        console.log("2nd row only")
+        for(var i = 0; i<aislecount; i++ ){
+            switch(allaisle[i]){
+
+                case "fruitveg":
+                    changecolor(medconaisle);
+                    changecolor(caninsaisle)
+                    changecolor(fruchiaisle);
+                    changecolor(fruitvegaisle);
+                    break;
+                
+                case "cannedgoods":
+                    changecolor(medconaisle);
+                    changecolor(caninsaisle);
+                    changecolor(cannedgoodsaisle);
+                    break;
+
+                case "medical":
+                    changecolor(medconaisle);
+                    changecolor(medicalaisle);
+                    break;
+
+                case "cleaning":
+                    changecolor(cleaningaisle);
+                    break;
+
+                default:
+                    break;
+
+            }
+        }
+    }else if((allaisle.includes("fruitveg") || allaisle.includes("cannedgoods") || allaisle.includes("medical") || allaisle.includes("cleaning")) || (allaisle.includes("chips") || allaisle.includes("instantnoodles") || allaisle.includes("condiments") || allaisle.includes("hygiene")) || (allaisle.includes("drinks") || allaisle.includes("frozen"))){
+        console.log("all")
+        changecolor(hygieneaisle);
+        changecolor(centeraisle);
+
+        for(var i = 0; i<aislecount; i++ ){
+            switch(allaisle[i]){
+                case "cleaning":
+                    changecolor(cleaningaisle);
+                    checkfrozendrinks(allaisle);
+                    break;
+
+                case "medical":
+                    changecolor(medconaisle);
+                    changecolor(medicalaisle);
+                    checkfrozendrinks(allaisle);
+                    break;
+
+                case "condiments":
+                    changecolor(medconaisle);
+                    changecolor(condimentsaisle);
+                    checkfrozendrinks(allaisle);
+                    break;
+
+                case "cannedgoods":
+                    changecolor(medconaisle);
+                    changecolor(caninsaisle);
+                    changecolor(cannedgoodsaisle);
+                    checkfrozendrinks(allaisle);
+                    break;
+
+                case "instantnoodles":
+                    changecolor(medconaisle);
+                    changecolor(caninsaisle);
+                    changecolor(instantnoodlesaisle);
+                    checkfrozendrinks(allaisle);
+                    break;
+
+                case "fruitveg":
+                    changecolor(medconaisle);
+                    changecolor(caninsaisle);
+                    changecolor(fruchiaisle);
+                    changecolor(fruitvegaisle);
+                    checkfrozendrinks(allaisle);
+                    
+                    break;
+
+                case "chips":
+                    changecolor(medconaisle);
+                    changecolor(caninsaisle);
+                    changecolor(fruchiaisle);
+                    changecolor(chipsaisle);
+                    checkfrozendrinks(allaisle);
+                    break;
+
+
+                default:
+                    break;
+
+            }
+
+
+        }
+        
+    }
     
 
-
-
-
-  
 }
+
+
+function checkfrozendrinks(currentaisle){
+    if(currentaisle.includes("drinks")){
+        changecolor(drinksaisle);
+    }else if(currentaisle.includes("frozen")){
+        changecolor(frozenaisle);
+    }
+}
+
 
 
 function changecolor(classaisle){
