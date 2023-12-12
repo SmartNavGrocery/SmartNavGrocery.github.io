@@ -218,6 +218,9 @@ function findpath(){
 
             }
         }
+
+
+        
     }else if((allaisle.includes("fruitveg") || allaisle.includes("cannedgoods") || allaisle.includes("medical") || allaisle.includes("cleaning")) || (allaisle.includes("chips") || allaisle.includes("instantnoodles") || allaisle.includes("condiments") || allaisle.includes("hygiene")) || (allaisle.includes("drinks") || allaisle.includes("frozen"))){
         console.log("all")
         changecolor(hygieneaisle);
@@ -227,33 +230,33 @@ function findpath(){
             switch(allaisle[i]){
                 case "cleaning":
                     changecolor(cleaningaisle);
-                    checkfrozendrinks(allaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
                     break;
 
                 case "medical":
                     changecolor(medconaisle);
                     changecolor(medicalaisle);
-                    checkfrozendrinks(allaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
                     break;
 
                 case "condiments":
                     changecolor(medconaisle);
                     changecolor(condimentsaisle);
-                    checkfrozendrinks(allaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
                     break;
 
                 case "cannedgoods":
                     changecolor(medconaisle);
                     changecolor(caninsaisle);
                     changecolor(cannedgoodsaisle);
-                    checkfrozendrinks(allaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
                     break;
 
                 case "instantnoodles":
                     changecolor(medconaisle);
                     changecolor(caninsaisle);
                     changecolor(instantnoodlesaisle);
-                    checkfrozendrinks(allaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
                     break;
 
                 case "fruitveg":
@@ -261,7 +264,7 @@ function findpath(){
                     changecolor(caninsaisle);
                     changecolor(fruchiaisle);
                     changecolor(fruitvegaisle);
-                    checkfrozendrinks(allaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
                     
                     break;
 
@@ -270,7 +273,7 @@ function findpath(){
                     changecolor(caninsaisle);
                     changecolor(fruchiaisle);
                     changecolor(chipsaisle);
-                    checkfrozendrinks(allaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
                     break;
 
 
@@ -288,12 +291,22 @@ function findpath(){
 }
 
 
-function checkfrozendrinks(currentaisle){
-    if(currentaisle.includes("drinks")){
+function checkfrozendrinks(currentaisle,arraisle){
+    if(arraisle.includes("drinks") && (currentaisle=="fruitveg" || currentaisle == "cannedgoods") && (!arraisle.includes("medical") && !arraisle.includes("cleaning"))){
         changecolor(drinksaisle);
-    }else if(currentaisle.includes("frozen")){
+        if(arraisle.includes("frozen")){
+            changecolor(frozenaisle);
+        }
+
+    }else if((currentaisle=="cleaning" || currentaisle == "medical") && arraisle.includes("frozen")){
         changecolor(frozenaisle);
+        if(arraisle.includes("drinks")){
+            changecolor(drinksaisle);
+        }
+    }else if(arraisle.includes("frozen")){
+
     }
+
 }
 
 
