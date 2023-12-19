@@ -308,7 +308,7 @@ function checkfrozendrinks(currentaisle,arraisle){
     }else if(arraisle.includes("frozen") && (!arraisle.includes("cleaning") && !arraisle.includes("medical")) && (arraisle.includes("cannedgoods") || arraisle.includes("fruitveg"))){
         changecolor(drinksaisle);
         changecolor(frozenaisle);
-    }else if(arraisle.includes("drinks") && (!arraisle.includes("cleaning") && !arraisle.includes("medical") && !arraisle.includes("cannedgoods") && !arraisle.includes("fruitveg"))){
+    }else if(arraisle.includes("drinks") && (!arraisle.includes("cleaning") || !arraisle.includes("medical") || !arraisle.includes("cannedgoods") || !arraisle.includes("fruitveg"))){
         if(arraisle.includes("chips")){
             changecolor(fruchiaisle);
             changecolor(fruitvegaisle);
@@ -328,7 +328,7 @@ function checkfrozendrinks(currentaisle,arraisle){
             changecolor(frozenaisle);
             changecolor(drinksaisle);
         }
-    }else if(arraisle.includes("frozen") && (!arraisle.includes("cleaning") && !arraisle.includes("medical") && !arraisle.includes("cannedgoods") && !arraisle.includes("fruitveg"))){
+    }else if(arraisle.includes("frozen") && (!arraisle.includes("cleaning") || !arraisle.includes("medical") || !arraisle.includes("cannedgoods") || !arraisle.includes("fruitveg"))){
         if(arraisle.includes("hygiene")){
             changecolor(centeraisle);
             changecolor(cleaningaisle);
