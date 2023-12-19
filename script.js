@@ -45,6 +45,8 @@ var caninsaisle = document.getElementsByClassName("caninsaisle")[0];
 
 
 function findpath(){
+
+    resetpath();
     // Get the content of the text area
     var textareaContent = document.getElementById("userentry").value;
 
@@ -355,4 +357,32 @@ function checkfrozendrinks(currentaisle,arraisle){
 
 function changecolor(classaisle){
     classaisle.style.backgroundColor  = 'red';
+}
+
+function resetcolor(classaisle){
+    classaisle.style.backgroundColor  = '';
+}
+
+
+
+
+function resetpath(){
+    resetcolor(drinksaisle);
+    resetcolor(frozenaisle);
+    resetcolor(fruitvegaisle);
+    resetcolor(cannedgoodsaisle);
+    resetcolor(medicalaisle);
+    resetcolor(cleaningaisle); 
+    resetcolor(hygieneaisle);
+    resetcolor(condimentsaisle); 
+    resetcolor(instantnoodlesaisle); 
+    resetcolor(chipsaisle); 
+    resetcolor(entrance);
+    resetcolor(conleftaisle);
+    resetcolor(insleftaisle);
+    resetcolor(chileftaisle);
+    resetcolor(centeraisle);
+    resetcolor(medconaisle);
+    resetcolor(fruchiaisle);
+    resetcolor(caninsaisle);
 }
