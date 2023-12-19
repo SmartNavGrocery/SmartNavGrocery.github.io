@@ -303,8 +303,50 @@ function checkfrozendrinks(currentaisle,arraisle){
         if(arraisle.includes("drinks")){
             changecolor(drinksaisle);
         }
-    }else if(arraisle.includes("frozen")){
+    }else if(arraisle.includes("frozen") && (!arraisle.includes("cleaning") && !arraisle.includes("medical")) && (arraisle.includes("cannedgoods") || arraisle.includes("fruitveg"))){
+        changecolor(drinksaisle);
+        changecolor(frozenaisle);
+    }else if(arraisle.includes("drinks") && (!arraisle.includes("cleaning") && !arraisle.includes("medical") && !arraisle.includes("cannedgoods") && !arraisle.includes("fruitveg"))){
+        if(arraisle.includes("chips")){
+            changecolor(fruchiaisle);
+            changecolor(fruitvegaisle);
+            changecolor(drinksaisle);
+        }else if(arraisle.includes("instantnoodles")){
+            changecolor(caninsaisle);
+            changecolor(cannedgoodsaisle);
+            changecolor(drinksaisle);
+        }else if(arraisle.includes("condiments")){
+            changecolor(medconaisle);
+            changecolor(medicalaisle);
+            changecolor(frozenaisle);
+            changecolor(drinksaisle);
+        }else if(arraisle.includes("hygiene")){
+            changecolor(centeraisle);
+            changecolor(cleaningaisle);
+            changecolor(frozenaisle);
+            changecolor(drinksaisle);
+        }
+    }else if(arraisle.includes("frozen") && (!arraisle.includes("cleaning") && !arraisle.includes("medical") && !arraisle.includes("cannedgoods") && !arraisle.includes("fruitveg"))){
+        if(arraisle.includes("hygiene")){
+            changecolor(centeraisle);
+            changecolor(cleaningaisle);
+            changecolor(frozenaisle);
 
+        }else if(arraisle.includes("condiments")){
+            changecolor(medconaisle);
+            changecolor(medicalaisle);
+            changecolor(frozenaisle);
+        }else if(arraisle.includes("instantnoodles")){
+            changecolor(caninsaisle);
+            changecolor(cannedgoodsaisle);
+            changecolor(drinksaisle);
+            changecolor(frozenaisle);
+        }else if(arraisle.includes("chips")){
+            changecolor(fruchiaisle);
+            changecolor(fruitvegaisle);
+            changecolor(drinksaisle);
+            changecolor(frozenaisle);
+        }
     }
 
 }
