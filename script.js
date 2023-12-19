@@ -230,6 +230,10 @@ function findpath(){
 
         for(var i = 0; i<aislecount; i++ ){
             switch(allaisle[i]){
+                case "hygiene":
+                    changecolor(hygieneaisle);
+                    checkfrozendrinks(allaisle[i],allaisle);
+                
                 case "cleaning":
                     changecolor(cleaningaisle);
                     checkfrozendrinks(allaisle[i],allaisle);
@@ -294,21 +298,28 @@ function findpath(){
 
 
 function checkfrozendrinks(currentaisle,arraisle){
+    console.log(currentaisle);
+    console.log("testt")
     if(arraisle.includes("drinks") && (currentaisle=="fruitveg" || currentaisle == "cannedgoods") && (!arraisle.includes("medical") && !arraisle.includes("cleaning"))){
+        console.log("1st")
+        
         changecolor(drinksaisle);
         if(arraisle.includes("frozen")){
             changecolor(frozenaisle);
         }
 
     }else if((currentaisle=="cleaning" || currentaisle == "medical") && arraisle.includes("frozen")){
+        console.log("2nd")
         changecolor(frozenaisle);
         if(arraisle.includes("drinks")){
             changecolor(drinksaisle);
         }
     }else if(arraisle.includes("frozen") && (!arraisle.includes("cleaning") && !arraisle.includes("medical")) && (arraisle.includes("cannedgoods") || arraisle.includes("fruitveg"))){
+        console.log("3rd")
         changecolor(drinksaisle);
         changecolor(frozenaisle);
     }else if(arraisle.includes("drinks") && (!arraisle.includes("cleaning") || !arraisle.includes("medical") || !arraisle.includes("cannedgoods") || !arraisle.includes("fruitveg"))){
+        console.log("4th")
         if(arraisle.includes("chips")){
             changecolor(fruchiaisle);
             changecolor(fruitvegaisle);
@@ -329,6 +340,7 @@ function checkfrozendrinks(currentaisle,arraisle){
             changecolor(drinksaisle);
         }
     }else if(arraisle.includes("frozen") && (!arraisle.includes("cleaning") || !arraisle.includes("medical") || !arraisle.includes("cannedgoods") || !arraisle.includes("fruitveg"))){
+        console.log("5th")
         if(arraisle.includes("hygiene")){
             changecolor(centeraisle);
             changecolor(cleaningaisle);
@@ -349,6 +361,10 @@ function checkfrozendrinks(currentaisle,arraisle){
             changecolor(drinksaisle);
             changecolor(frozenaisle);
         }
+    }else if(arraisle.includes("drinks") && (!arraisle.includes("cannedgoods") && !arraisle.includes("fruitveg"))){
+        console.log("6th")
+        changecolor(drinksaisle);
+        changecolor(frozenaisle);
     }
 
 }
