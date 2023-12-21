@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-
+    
 }
 
 
@@ -48,7 +48,7 @@ body{
 
 
 .container {  display: grid;
-grid-template-columns: 0.4fr 0.5fr 1.5fr 0.7fr 1.9fr 0.5fr;
+grid-template-columns: 10vw 5vw 36vw 5vw 36vw 5vw;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 gap: 0px 0px;
 grid-auto-flow: row;
@@ -63,13 +63,16 @@ grid-template-areas:
     "frozen frozenaisle cleaningaisle centeraisle hygieneaisle entrance";
 }
 
+
+
+
 .hygiene, .condiments, .instantnoodles, .chips, .cleaning, .medical, .cannedgoods, .fruitveg{
     text-align: center;
     padding: 5%;
     font-weight: bold;
     border: 3px solid black ;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1vw;
     margin: 3px;
 }
 
@@ -124,6 +127,41 @@ grid-template-areas:
 .cleaning { grid-area: cleaning; 
     background-color: rgb(206, 230, 241);
 }
+
+
+
+.fruitvegaisle, .cannedgoodsaisle, .medicalaisle, .cleaningaisle, .hygieneaisle, .condimentsaisle, .instantnoodlesaisle, .chipsaisle, .entrance, .centeraisle{
+    border-radius: 5px;
+}
+
+
+
+.frozenaisle, .drinksaisle, .medconaisle, .caninsaisle, .fruchiaisle, .chileftaisle, .insleftaisle, .conleftaisle{
+    border-radius: 5px;
+}
+
+
+.breathing {
+    animation: breathe 3s infinite alternate;
+}
+
+.nobreathing {
+    animation: breathe 3s infinite alternate;
+}
+
+@keyframes breathe {
+    0% {
+        background-color: rgba(124, 182, 151, 0.878);
+    }
+    50% {
+        background-color: rgb(234, 224, 37);
+    }
+    100% {
+        background-color: rgb(203, 102, 102);
+    }
+}
+
+
 
 
 .drinksaisle { grid-area: drinksaisle; 

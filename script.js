@@ -281,8 +281,15 @@ function findpath(){
                     changecolor(chipsaisle);
                     checkfrozendrinks(allaisle[i],allaisle);
                     break;
-
-
+                
+                case "frozen":
+                    checkfrozendrinks(allaisle[i],allaisle);
+                    break;
+                    
+                case "drinks":
+                    checkfrozendrinks(allaisle[i],allaisle);
+                    break;
+                
                 default:
                     break;
 
@@ -308,6 +315,14 @@ function checkfrozendrinks(currentaisle,arraisle){
             changecolor(frozenaisle);
         }
 
+    }else if((arraisle.includes("frozen") || arraisle.includes("drinks")) && (!arraisle.includes("cleaning") && !arraisle.includes("medical") && !arraisle.includes("cannedgoods") && !arraisle.includes("fruitveg") && !arraisle.includes("hygiene") && !arraisle.includes("condiments") && !arraisle.includes("instantnoodles") && !arraisle.includes("chips"))){
+        changecolor(centeraisle);
+        changecolor(cleaningaisle);
+        changecolor(frozenaisle);
+        if(arraisle.includes("drinks")){
+            changecolor(drinksaisle);
+        }
+    
     }else if((currentaisle=="cleaning" || currentaisle == "medical") && arraisle.includes("frozen")){
         console.log("2nd")
         changecolor(frozenaisle);
@@ -373,10 +388,24 @@ function checkfrozendrinks(currentaisle,arraisle){
 
 function changecolor(classaisle){
     classaisle.style.backgroundColor  = 'red';
+    console.log(classaisle);
+    if(classaisle == conleftaisle || classaisle == insleftaisle || classaisle == chileftaisle || classaisle == medconaisle || classaisle == caninsaisle || classaisle == fruchiaisle || classaisle == frozenaisle || classaisle == drinksaisle){
+        //classaisle.style.backgroundImage =  "linear-gradient(180deg, transparent, transparent 50%, #fff 50%, #fff 100%), linear-gradient(90deg, #c48686, #c48686, #c48686, #c48686, #c48686)"
+
+    }else{
+        //classaisle.style.backgroundImage =  "linear-gradient(90deg, transparent, transparent 50%, #fff 50%, #fff 100%), linear-gradient(90deg, #c48686, #c48686, #c48686, #c48686, #c48686)"
+    }
+    classaisle.classList.add('breathing');
+
+
 }
 
 function resetcolor(classaisle){
     classaisle.style.backgroundColor  = '';
+    classaisle.style.backgroundImage =  ""
+    classaisle.classList.add('nobreathing');
+    classaisle.classList.remove('breathing');
+    classaisle.classList.remove('nobreathing');
 }
 
 
