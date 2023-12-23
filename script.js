@@ -1,4 +1,4 @@
-const chips = ["patata", "piattos", "nova", "lala", "prawn crackers", "snacku", "moby"]
+const chips = ["patata", "piattos", "nova", "lala", "prawn crackers", "snacku", "moby", "cheezy", "fishda"]
 
 const fruitveg = ["apple", "orange", "mango", "onion", "garlic", "parsley", "basil", "grape", "tomato"]
 
@@ -6,13 +6,13 @@ const instantnoodles = ["lucky me", "nissin", "cup noodles", "pancit canton", "l
 
 const cannedgoods = ["argentina", "cdo", "purefoods", "spam", "hunts", "meat loaf", "beef loaf", "corned beef", "century tuna", "sardines", "555", "san marino"]
 
-const medical = ["band aid", "alcohol", "gauze", "ethyl", "isopropyl", "face mask", "plaster", "pregnancy test", "surgical gloves", "cotton", "betadine", "iodine", "scissors"]
+const medical = ["band aid", "alcohol", "gauze", "ethyl", "isopropyl", "face mask", "plaster", "pregnancy test", "surgical gloves", "cotton", "betadine", "iodine", "scissors", "betadine"]
 
-const condiments = ["soy sauce", "vinegar", "pepper", "salt", "garlic powder", "vegetable oil", "sesame oil", "canola oil", "olive oil", "fish sauce", "chili oil", "ketchup", "mustard", "mayonnaise"]
+const condiments = ["soy sauce", "vinegar", "pepper", "salt", "garlic powder", "vegetable oil", "sesame oil", "canola oil", "olive oil", "fish sauce", "chili oil", "ketchup", "mustard", "mayonnaise". "heinz", "datu puti", "silver swan", "kikkoman", "mama sita", "oyster sauce"]
 
-const cleaning = ["zonrox", "fasbric conditioner", "tissue", "wet wipes", "detergent powder", "detergent bar", "bleackh", "laundry detergent", "all purpose cleaner"]
+const cleaning = ["zonrox", "fabric conditioner", "tissue", "wet wipes", "detergent powder", "detergent bar", "bleach", "laundry detergent", "all purpose cleaner", "downey", "tide", "breeze", "surf", "ariel", "joy", "dishwashing liquid"]
 
-const hygiene = ["bar soap", "hand soap", "shampoo", "conditioner", "lotion", "deodorant", "cotton buds", "cotton swabs", "moisturizer", "toner"]
+const hygiene = ["bar soap", "hand soap", "shampoo", "conditioner", "lotion", "deodorant", "cotton buds", "cotton swabs", "moisturizer", "toner", "palmolive", "cream silk", "sun silk", "dove", "head n shoulders", "pantene"]
 
 const drinks = ["coke", "tang juice drink", "sprite", "royal", "dr pepper", "root beer", "c2", "tang", "beer", "soju", "wine"]
 
