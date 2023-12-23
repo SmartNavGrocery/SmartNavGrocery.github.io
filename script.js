@@ -8,7 +8,7 @@ const cannedgoods = ["canned goods", "argentina", "cdo", "purefoods", "spam", "h
 
 const medical = ["medical", "band aid", "alcohol", "gauze", "ethyl", "isopropyl", "face mask", "plaster", "pregnancy test", "surgical gloves", "cotton", "betadine", "iodine", "scissors", "betadine"]
 
-const condiments = ["condiments", "soy sauce", "vinegar", "pepper", "salt", "garlic powder", "vegetable oil", "sesame oil", "canola oil", "olive oil", "fish sauce", "chili oil", "ketchup", "mustard", "mayonnaise". "heinz", "datu puti", "silver swan", "kikkoman", "mama sita", "oyster sauce"]
+const condiments = ["condiments", "soy sauce", "vinegar", "pepper", "salt", "garlic powder", "vegetable oil", "sesame oil", "canola oil", "olive oil", "fish sauce", "chili oil", "ketchup", "mustard", "mayonnaise", "heinz", "datu puti", "silver swan", "kikkoman", "mama sita", "oyster sauce"]
 
 const cleaning = ["cleaning", "zonrox", "fabric conditioner", "tissue", "wet wipes", "detergent powder", "detergent bar", "bleach", "laundry detergent", "all purpose cleaner", "downey", "tide", "breeze", "surf", "ariel", "joy", "dishwashing liquid"]
 
