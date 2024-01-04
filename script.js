@@ -42,6 +42,17 @@ var fruchiaisle = document.getElementsByClassName("fruchiaisle")[0];
 var caninsaisle = document.getElementsByClassName("caninsaisle")[0];
 
 
+var frudot = document.getElementsByClassName("frudot")[0];
+var chidot = document.getElementsByClassName("chidot")[0];
+var candot = document.getElementsByClassName("candot")[0];
+var insdot = document.getElementsByClassName("insdot")[0];
+var meddot = document.getElementsByClassName("meddot")[0];
+var condot = document.getElementsByClassName("condot")[0];
+var cledot = document.getElementsByClassName("cledot")[0];
+var hygdot = document.getElementsByClassName("hygdot")[0];
+var dridot = document.getElementsByClassName("dridot")[0];
+var frodot = document.getElementsByClassName("frodot")[0];
+
 
 
 function findpath(){
@@ -74,24 +85,34 @@ function findpath(){
     for(var i=0; i<itemsArray[0].length; i++){
         if(chips.includes(itemsArray[0][i])){
             aisles.push("chips");
+            chidot.style.backgroundColor = "black";
         }else if(fruitveg.includes(itemsArray[0][i])){
             aisles.push("fruitveg");
+            frudot.style.backgroundColor = "black";
         }else if(instantnoodles.includes(itemsArray[0][i])){
             aisles.push("instantnoodles");
+            insdot.style.backgroundColor = "black";
         }else if(cannedgoods.includes(itemsArray[0][i])){
             aisles.push("cannedgoods");
+            candot.style.backgroundColor = "black";
         }else if(medical.includes(itemsArray[0][i])){
             aisles.push("medical");
+            meddot.style.backgroundColor = "black";
         }else if(condiments.includes(itemsArray[0][i])){
             aisles.push("condiments");
+            condot.style.backgroundColor = "black";
         }else if(cleaning.includes(itemsArray[0][i])){
             aisles.push("cleaning");
+            cledot.style.backgroundColor = "black";
         }else if(hygiene.includes(itemsArray[0][i])){
             aisles.push("hygiene");
+            hygdot.style.backgroundColor = "black";
         }else if(drinks.includes(itemsArray[0][i])){
             aisles.push("drinks");
+            dridot.style.backgroundColor = "black";
         }else if(frozen.includes(itemsArray[0][i])){
             aisles.push("frozen");
+            frodot.style.backgroundColor = "black";
         }
     }
 
@@ -224,6 +245,7 @@ function findpath(){
 
         
     }else if((allaisle.includes("fruitveg") || allaisle.includes("cannedgoods") || allaisle.includes("medical") || allaisle.includes("cleaning")) || (allaisle.includes("chips") || allaisle.includes("instantnoodles") || allaisle.includes("condiments") || allaisle.includes("hygiene")) || (allaisle.includes("drinks") || allaisle.includes("frozen"))){
+        
         console.log("all")
         changecolor(hygieneaisle);
         changecolor(centeraisle);
@@ -301,6 +323,8 @@ function findpath(){
     }
     
 
+
+    
 }
 
 
