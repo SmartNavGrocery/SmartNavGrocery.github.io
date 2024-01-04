@@ -80,7 +80,7 @@ function findpath(){
         itemsArray.push(rowItems);
         
     }
-
+    
 
     for(var i=0; i<itemsArray[0].length; i++){
         if(chips.includes(itemsArray[0][i])){
@@ -136,6 +136,7 @@ function findpath(){
             if(allaisle.includes("drinks")){
                 changecolor(drinksaisle);
             }
+
         }else if(allaisle.includes("chips") || allaisle.includes("instantnoodles") || allaisle.includes("condiments") || allaisle.includes("hygiene")){
             
             if(allaisle[0]=="chips"){
