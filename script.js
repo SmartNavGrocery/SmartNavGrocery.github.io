@@ -455,4 +455,14 @@ function resetpath(){
     resetcolor(medconaisle);
     resetcolor(fruchiaisle);
     resetcolor(caninsaisle);
+    chidot.style.backgroundColor = "";
+    frodot.style.backgroundColor = "";
+    candot.style.backgroundColor = "";
+    insdot.style.backgroundColor = "";
+    meddot.style.backgroundColor = "";
+    condot.style.backgroundColor = "";
+    cledot.style.backgroundColor = "";
+    hygdot.style.backgroundColor = "";
+    dridot.style.backgroundColor = "";
+    frodot.style.backgroundColor = "";
 }
