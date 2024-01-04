@@ -2,7 +2,7 @@ const chips = ["chips", "patata", "piattos", "nova", "lala", "prawn crackers", "
 
 const fruitveg = ["fruits", "vegetables", "apple", "orange", "mango", "onion", "garlic", "parsley", "basil", "grape", "tomato"]
 
-const instantnoodles = ["instant noodles", "lucky me", "nissin", "cup noodles", "pancit canton", "lomi", "pancit shanghai"]
+const instantnoodles = ["instant noodles", "lucky me", "nissin", "cup noodles", "pancit canton", "lomi", "pancit shanghai", "yakisoba", "mi goreng"]
 
 const cannedgoods = ["canned goods", "argentina", "cdo", "purefoods", "spam", "hunts", "meat loaf", "beef loaf", "corned beef", "century tuna", "sardines", "555", "san marino"]
 
